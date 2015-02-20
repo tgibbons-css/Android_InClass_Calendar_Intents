@@ -34,24 +34,25 @@ public class SecondActivity extends Activity {
 		}
 		
 		if (eventNum.equals("1")) {
-			tvTitle.setText("Red Baraat");
-			tvSum.setText("Red Baraat has established a reputation as one of the best live bands playing in the world. Led by dhol drummer Sunny Jain, the nine piece band melds the infectious North Indian rhythm Bhangra with a host of sounds, namely funk, go-go, Latin, and jazz.");
+			tvTitle.setText("Katie McMahon’s");
+			tvSum.setText("Katie McMahon returns for a celebration of St. Patrick’s Day.  Originally from Dublin, and classically trained in voice and harp, she was a soloist with the original Riverdance troupe. She is joined by a Celtic band and dancers for this evening of everything Irish.");
 			tvLoc.setText("Mitchell Auditorium");
-			tvDate.setText("FRIDAY, FEBRUARY 22, 2013");
+			tvDate.setText("FRIDAY, MARCH 13, 2015");
 		}
 		if (eventNum.equals("2")) {
-			tvTitle.setText("Billy McLaughlin and His Eclectic String Quartet");
-			tvSum.setText("Billy McLaughlin is recognized internationally as a best-selling guitar virtuoso, composer and inspirational performer. In 2001, Billy was diagnosed with focal dystonia, an incurable neuromuscular disease that robbed him of the ability to play his own music.");
+			tvTitle.setText("Randall Poole");
+			tvSum.setText("Randall A. Poole, Ph.D. is Professor of History at the College of St. Scholastica.  His research areas include Russian and European intellectual history, the history of ideas and the history of philosophical and religious thought.");
 			tvLoc.setText("Mitchell Auditorium");
-			tvDate.setText("FRIDAY, March 8, 2013");
+			tvDate.setText("THURSDAY, MARCH 26, 2015");
 		}
 		if (eventNum.equals("3")) {
-			tvTitle.setText("Battlefield Band");
-			tvSum.setText("A bedrock of talent for over four decades,Battlefield Band continue to lead the way for Scotland with their inspired fusion of ancient and modern traditional music and song.");
+			tvTitle.setText("Click Clack Moo!");
+			tvSum.setText("Cows that type? Hens on strike! Whoever heard of such a thing Farmer Brown cries When his granddaughter Jenny comes for a visit, Farmer Brown declared the farm a \"tech-free zone.\" He confiscates her laptop in the cold barn along with the shivering cows who use her computer to type messages requesting blankets.\n" +
+                    "\"No way,\" replies Farmer Brown. \"No blankets!\"");
 			tvLoc.setText("Mitchell Auditorium");
-			tvDate.setText("FRIDAY, March 22, 2013");
+			tvDate.setText(" THURSDAY, FEBRUARY 26, 2015");
 		}
-		
+
 	}
 
 	@Override
@@ -67,10 +68,10 @@ public class SecondActivity extends Activity {
 		
 			Intent calIntent = new Intent(Intent.ACTION_INSERT);
 			calIntent.setType("vnd.android.cursor.item/event");
-			calIntent.putExtra(Events.TITLE, "Red Baraat");
+			calIntent.putExtra(Events.TITLE, "Katie McMahon’s St. Patrick’s Day Party");
 			calIntent.putExtra(Events.EVENT_LOCATION, "Mitchell Auditorium");
-			GregorianCalendar begDate = new GregorianCalendar(2015, 2, 22, 7, 30);
-			GregorianCalendar endDate = new GregorianCalendar(2015, 2, 22, 9, 30);
+			GregorianCalendar begDate = new GregorianCalendar(2015, 3, 13, 7, 30);
+			GregorianCalendar endDate = new GregorianCalendar(2015, 3, 13, 9, 30);
 			calIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
 					begDate.getTimeInMillis());
 			calIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
@@ -80,23 +81,27 @@ public class SecondActivity extends Activity {
 		if (eventNum.equals("2")) {
 			Intent calIntent = new Intent(Intent.ACTION_INSERT);
 			calIntent.setType("vnd.android.cursor.item/event");
-			calIntent.putExtra(Events.TITLE, "Billy McLaughlin");
+			calIntent.putExtra(Events.TITLE, "Randall Poole");
 			calIntent.putExtra(Events.EVENT_LOCATION, "Mitchell Auditorium");
+            GregorianCalendar begDate = new GregorianCalendar(2015, 3, 26, 7, 30);
+            GregorianCalendar endDate = new GregorianCalendar(2015, 3, 26, 9, 30);
+            calIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                    begDate.getTimeInMillis());
+            calIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
+                    endDate.getTimeInMillis());
 			startActivity(calIntent);
 		}
 		if (eventNum.equals("3")) {
 			Intent calIntent = new Intent(Intent.ACTION_INSERT);
 			calIntent.setType("vnd.android.cursor.item/event");
-			calIntent.putExtra(Events.TITLE, "Battlefield Band");
+			calIntent.putExtra(Events.TITLE, "Click Clack Moo!d");
 			calIntent.putExtra(Events.EVENT_LOCATION, "Mitchell Auditorium");
-			Calendar beginTime = Calendar.getInstance();
-			beginTime.set(2015, 2, 22, 7, 30);
-			Calendar endTime = Calendar.getInstance();
-			endTime.set(2015, 2, 22, 9, 30);
-			calIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
-					beginTime.getTimeInMillis());
-			calIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
-					endTime.getTimeInMillis());
+            GregorianCalendar begDate = new GregorianCalendar(2015, 2, 26, 12, 30);
+            GregorianCalendar endDate = new GregorianCalendar(2015, 2, 26, 2, 30);
+            calIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                    begDate.getTimeInMillis());
+            calIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
+                    endDate.getTimeInMillis());
 			startActivity(calIntent);
 
 		}
