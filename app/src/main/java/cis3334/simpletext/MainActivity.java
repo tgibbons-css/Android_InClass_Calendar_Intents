@@ -22,21 +22,24 @@ public class MainActivity extends Activity {
 	}
 	
     public void onClickB1(View view) {
+        // create an intent for the second activity
     	Intent i = new Intent(getApplicationContext(), SecondActivity.class);
-    	i.putExtra("eventNum","1");
-    	startActivity(i);
+    	i.putExtra("eventNum","1");         // pass the event number 1 to the second activity
+    	startActivity(i);                   // start up the second activity
     }
     
     public void onClickB2(View view) {
-    	Intent i = new Intent(getApplicationContext(), SecondActivity.class);
-    	i.putExtra("eventNum","2");
-    	startActivity(i);
+        // create an intent for the second activity
+        Intent i = new Intent(getApplicationContext(), SecondActivity.class);
+    	i.putExtra("eventNum","2");         // pass the event number 2 to the second activity
+    	startActivity(i);                   // start up the second activity
     }
     
     public void onClickB3(View view) {
+        // create an intent for the second activity
     	Intent i = new Intent(getApplicationContext(), SecondActivity.class);
-    	i.putExtra("eventNum","3");
-    	startActivity(i);
+    	i.putExtra("eventNum","3");         // pass the event number 3 to the second activity
+    	startActivity(i);                   // start up the second activity
     }
 
 }

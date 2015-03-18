@@ -27,12 +27,14 @@ public class SecondActivity extends Activity {
 		tvSum = (TextView) findViewById(R.id.txtSummary);
 		tvLoc = (TextView) findViewById(R.id.txtLocation);
 		tvDate = (TextView) findViewById(R.id.txtDate);
-		
+
+        // get the data passed from the main activity using extras
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
+            // grab the event number as a string from the main activity using extras
 		    eventNum = extras.getString("eventNum");
 		}
-		
+		//depending on the event number, display different information on this form
 		if (eventNum.equals("1")) {
 			tvTitle.setText("Katie McMahon’s");
 			tvSum.setText("Katie McMahon returns for a celebration of St. Patrick’s Day.  Originally from Dublin, and classically trained in voice and harp, she was a soloist with the original Riverdance troupe. She is joined by a Celtic band and dancers for this evening of everything Irish.");
