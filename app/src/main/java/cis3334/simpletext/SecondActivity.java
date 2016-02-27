@@ -36,23 +36,24 @@ public class SecondActivity extends Activity {
 		}
 		//depending on the event number, display different information on this form
 		if (eventNum.equals("1")) {
-			tvTitle.setText("Katie McMahon’s");
-			tvSum.setText("Katie McMahon returns for a celebration of St. Patrick’s Day.  Originally from Dublin, and classically trained in voice and harp, she was a soloist with the original Riverdance troupe. She is joined by a Celtic band and dancers for this evening of everything Irish.");
+			tvTitle.setText("Thistles & Shamrocks");
+			tvSum.setText("An Evening of Scottish & Irish Music and Dance sponsored by the Duluth Scottish Heritage Association -Steve Hand playing the Irish Whistle -DSHA Pipes & Drums band -Erianna Macpherson Reyelts -Scottish Fiddler Mary MacGillivray -DSHA Dancers -And More! Reception following the performance");
 			tvLoc.setText("Mitchell Auditorium");
-			tvDate.setText("FRIDAY, MARCH 13, 2015");
+			tvDate.setText("FRIDAY, MARCH 4, 2016, 7 P.M.");
 		}
 		if (eventNum.equals("2")) {
-			tvTitle.setText("Randall Poole");
-			tvSum.setText("Randall A. Poole, Ph.D. is Professor of History at the College of St. Scholastica.  His research areas include Russian and European intellectual history, the history of ideas and the history of philosophical and religious thought.");
+			tvTitle.setText("Why Civil Resistance Works with Erica Chenoweth");
+			tvSum.setText("Erica Chenoweth, Ph.D., is an associate professor at the Josef Korbel School of International Studies at the University of Denver and an associate senior researcher at the Peace Research Institute of Oslo.\n" +
+					"\n" +
+					"An internationally recognized authority on political violence and its alternatives, Foreign Policy magazine ranked her among the Top 100 Global Thinkers in 2013 for her efforts to promote the empirical study of civil resistance.");
 			tvLoc.setText("Mitchell Auditorium");
-			tvDate.setText("THURSDAY, MARCH 26, 2015");
+			tvDate.setText("THURSDAY, MARCH 10, 2016, 7:30 P.M.");
 		}
 		if (eventNum.equals("3")) {
-			tvTitle.setText("Click Clack Moo!");
-			tvSum.setText("Cows that type? Hens on strike! Whoever heard of such a thing Farmer Brown cries When his granddaughter Jenny comes for a visit, Farmer Brown declared the farm a \"tech-free zone.\" He confiscates her laptop in the cold barn along with the shivering cows who use her computer to type messages requesting blankets.\n" +
-                    "\"No way,\" replies Farmer Brown. \"No blankets!\"");
+			tvTitle.setText("Haydn, The Prince and Baryton");
+			tvSum.setText("Haydn wrote more than 120 works of chamber music to satisfy the passion Prince Nikolaus Esterhazy had for playing his beloved baryton. Tonight we offer a rare opportunity to hear this unusual stringed-instrument. Penny Schwarze, baryton, will be joined by Ron Kari, viola, and Betsy Husby, cello, in a performance of charming trios composed for the Prince’s pleasure. The program will also include one of Haydn's piano trios, featuring LeAnn House performing on a replica of an 18th-century piano.");
 			tvLoc.setText("Mitchell Auditorium");
-			tvDate.setText(" THURSDAY, FEBRUARY 26, 2015");
+			tvDate.setText("SATURDAY, MARCH 12, 2016, 7:30 P.M.");
 		}
 
 	}
@@ -70,10 +71,10 @@ public class SecondActivity extends Activity {
 		
 			Intent calIntent = new Intent(Intent.ACTION_INSERT);
 			calIntent.setType("vnd.android.cursor.item/event");
-			calIntent.putExtra(Events.TITLE, "Katie McMahon’s St. Patrick’s Day Party");
+			calIntent.putExtra(Events.TITLE, "Thistles & Shamrocks");
 			calIntent.putExtra(Events.EVENT_LOCATION, "Mitchell Auditorium");
-			GregorianCalendar begDate = new GregorianCalendar(2015, 3, 13, 7, 30);
-			GregorianCalendar endDate = new GregorianCalendar(2015, 3, 13, 9, 30);
+			GregorianCalendar begDate = new GregorianCalendar(2016, 3, 4, 7, 00);
+			GregorianCalendar endDate = new GregorianCalendar(2015, 3, 4, 9, 00);
 			calIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
 					begDate.getTimeInMillis());
 			calIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
@@ -83,10 +84,10 @@ public class SecondActivity extends Activity {
 		if (eventNum.equals("2")) {
 			Intent calIntent = new Intent(Intent.ACTION_INSERT);
 			calIntent.setType("vnd.android.cursor.item/event");
-			calIntent.putExtra(Events.TITLE, "Randall Poole");
+			calIntent.putExtra(Events.TITLE, "Why Civil Resistance Works with Erica Chenoweth");
 			calIntent.putExtra(Events.EVENT_LOCATION, "Mitchell Auditorium");
-            GregorianCalendar begDate = new GregorianCalendar(2015, 3, 26, 7, 30);
-            GregorianCalendar endDate = new GregorianCalendar(2015, 3, 26, 9, 30);
+            GregorianCalendar begDate = new GregorianCalendar(2016, 3, 10, 7, 30);
+            GregorianCalendar endDate = new GregorianCalendar(2016, 3, 10, 9, 30);
             calIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
                     begDate.getTimeInMillis());
             calIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
@@ -96,10 +97,10 @@ public class SecondActivity extends Activity {
 		if (eventNum.equals("3")) {
 			Intent calIntent = new Intent(Intent.ACTION_INSERT);
 			calIntent.setType("vnd.android.cursor.item/event");
-			calIntent.putExtra(Events.TITLE, "Click Clack Moo!d");
+			calIntent.putExtra(Events.TITLE, "Haydn, The Prince and Baryton");
 			calIntent.putExtra(Events.EVENT_LOCATION, "Mitchell Auditorium");
-            GregorianCalendar begDate = new GregorianCalendar(2015, 2, 26, 12, 30);
-            GregorianCalendar endDate = new GregorianCalendar(2015, 2, 26, 2, 30);
+            GregorianCalendar begDate = new GregorianCalendar(2015, 3, 12, 7, 30);
+            GregorianCalendar endDate = new GregorianCalendar(2015, 3, 12, 9, 30);
             calIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
                     begDate.getTimeInMillis());
             calIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
